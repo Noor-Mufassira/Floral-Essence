@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freshly - Floral Artistry</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="Logo.png"
+            alt="Freshly Logo"
+            height="60"
+            class="me-2"
+          />
+          Freshly
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="home2-copy.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="occasion.html">Occasions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <div class="search-box">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="global-search"
+                class="form-control"
+                placeholder="Search..."
+              />
+            </div>
+
+            <div class="nav-icons">
+              <a href="cart.html" class="nav-icon cart-icon position-relative">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >0</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="hero-content text-center">
+          <h1 class="hero-title">Floral Artistry for Every Occasion</h1>
+          <p class="hero-subtitle">
+            Handcrafted bouquets and arrangements that bring joy and beauty to
+            your special moments.
+          </p>
+          <a href="#new-collection" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-truck fa-2x"></i></div>
+              <h3 class="feature-title">Free Delivery</h3>
+              <p>On all orders over $50 within the city</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-gift fa-2x"></i></div>
+              <h3 class="feature-title">Special Packaging</h3>
+              <p>Beautiful gift wrapping for all occasions</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-leaf fa-2x"></i></div>
+              <h3 class="feature-title">Fresh Flowers</h3>
+              <p>Handpicked daily for maximum freshness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content container py-5">
+      <!-- New Collection Section -->
+      <section class="new-collection mb-5" id="new-collection">
+        <h2 class="section-title mb-4">New Collection</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/173835591135.webp"
+                class="card-img-top"
+                alt="Shimmering Box"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Shimmering Box</h5>
+                <p class="price">$42.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="product.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/17246800474.webp"
+                class="card-img-top"
+                alt="Opulent Floral"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Opulent Floral</h5>
+                <p class="price">$45.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/opulent_floral.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/17184546166.webp"
+                class="card-img-top"
+                alt="Faithful Festivity"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Faithful Festivity</h5>
+                <p class="price">$51.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a
+                  href="products/faithful_festivity.html"
+                  class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals Section -->
+      <section class="new-arrivals mb-5">
+        <h2 class="section-title mb-4">New Arrival Items</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/1742814423011.jpg"
+                class="card-img-top"
+                alt="Sunlight Eid Serenity"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Sunlight Eid Serenity</h5>
+                <p class="price">$39.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/Sunlight.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/174281244406.jpg"
+                class="card-img-top"
+                alt="Luxury Dream Box"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Luxury Dream Box</h5>
+                <p class="price">$48.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/luxury_dream.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/17224143586.jpg"
+                class="card-img-top"
+                alt="Bright & Blossom"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Bright & Blossom</h5>
+                <p class="price">$59.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/bright.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Additional New Arrival Items -->
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/174281140002.jpg"
+                class="card-img-top"
+                alt="Blue Purplish Bliss"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Blue Purplish Bliss</h5>
+                <p class="price">$57.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a
+                  href="products/blue_purplish_bliss.html"
+                  class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/16889003581.jpg"
+                class="card-img-top"
+                alt="Hajj Mubarak"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Hajj Mubarak</h5>
+                <p class="price">$63.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/hajj_mubarak.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/1685349221009.jpg"
+                class="card-img-top"
+                alt="Sunshine Likey"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Sunshine Likey</h5>
+                <p class="price">$49.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/sunshine_likey.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/17184551828.webp"
+                class="card-img-top"
+                alt="Sky Bouquet"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Sky Bouquet</h5>
+                <p class="price">$39.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/sky_bouquet.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/1738066655013.webp"
+                class="card-img-top"
+                alt="Forever Yours"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Forever Yours</h5>
+                <p class="price">$44.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/forever.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/174281115401.jpg"
+                class="card-img-top"
+                alt="Luxury Bloom Cash"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Luxury Bloom Cash</h5>
+                <p class="price">$55.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/luxury.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Top Products Section -->
+      <section class="top-products mb-5">
+        <h2 class="section-title mb-4">Top Products</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/1609184882Customise-Bouqet.jpg"
+                class="card-img-top"
+                alt="Customize Bunch"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Customize Bunch</h5>
+                <p class="price">$37.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/customize_bunch.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/1595423102BE050.jpg"
+                class="card-img-top"
+                alt="Eid Wish Article"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Eid Wish Article</h5>
+                <p class="price">$42.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/eidwish.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://www.blossomsflorals.com/public/images/products/16760613941609406114Love-Box.jpg"
+                class="card-img-top"
+                alt="Love Box"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Love Box</h5>
+                <p class="price">$59.99</p>
+                <button class="btn btn-primary mb-2 add-to-cart-btn">
+                  Add to Cart
+                </button>
+                <a href="products/lovebox.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <h2 class="section-title mb-3">Stay Updated</h2>
+            <p class="mb-4">
+              Subscribe to our newsletter for exclusive offers and floral
+              inspiration
+            </p>
+            <form class="row g-3">
+              <div class="col-md-8 mx-auto">
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-dark text-dark pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h3 class="footer-title">Freshly</h3>
+            <p>
+              Premium floral arrangements delivered fresh to your door. Bringing
+              nature's beauty to your special moments.
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h4 class="footer-title">Shop</h4>
+            <div class="footer-links">
+              <a href="#" class="text-white d-block mb-2">All Flowers</a>
+              <a href="#" class="text-white d-block mb-2">Seasonal</a>
+              <a href="#" class="text-white d-block mb-2">Wedding</a>
+              <a href="#" class="text-white d-block mb-2">Sympathy</a>
+              <a href="#" class="text-white d-block">Plants</a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h4 class="footer-title">Information</h4>
+            <div class="footer-links">
+              <a href="#" class="text-white d-block mb-2">About Us</a>
+              <a href="#" class="text-white d-block mb-2">Delivery Info</a>
+              <a href="#" class="text-white d-block mb-2">Privacy Policy</a>
+              <a href="#" class="text-white d-block mb-2">Terms & Conditions</a>
+              <a href="#" class="text-white d-block">FAQ</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mb-4">
+            <h4 class="footer-title">Contact Us</h4>
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i>123 Flower Street,
+              Garden City
+            </p>
+            <p><i class="fas fa-phone me-2"></i>(123) 456-7890</p>
+            <p><i class="fas fa-envelope me-2"></i>hello@freshly.com</p>
+            <form id="subscribe-form" class="newsletter mt-3">
+              <input
+                type="email"
+                name="email"
+                id="subscribe-email"
+                class="form-control mb-2"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" class="btn btn-primary w-100">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p class="mb-0">&copy; 2025 Freshly. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

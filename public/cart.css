@@ -1,0 +1,128 @@
+:root {
+  --color-light: #FFEDFA;
+  --color-medium-light: #FFB8E0;
+  --color-medium: #EC7FA9;
+  --color-dark: #BE5985;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding-top: 80px;
+}
+
+.cart-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.cart-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--color-dark);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-table th, .cart-table td {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-table th {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 600;
+}
+.cart-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-table img:hover {
+  transform: scale(1.05);
+}
+
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  background-color: var(--color-medium-light);
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background-color: var(--color-medium);
+}
+
+.quantity-display {
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: red;
+}
+
+.cart-summary {
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin-bottom: 30px;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart-buttons .btn {
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cart-table th, .cart-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .cart-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

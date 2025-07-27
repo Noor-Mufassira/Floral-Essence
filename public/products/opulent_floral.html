@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opulent Floral - Freshly</title>
+
+    <!-- Bootstrap & Fonts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --color-light: #ffedfa;
+        --color-medium-light: #ffb8e0;
+        --color-medium: #ec7fa9;
+        --color-dark: #be5985;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: #333;
+        background-color: #fff;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--color-dark);
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-brand img {
+        height: 60px;
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .nav-link {
+        color: #555;
+        font-weight: 500;
+        margin: 0 15px;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--color-dark);
+      }
+
+      .nav-icon {
+        color: var(--color-dark);
+        font-size: 1.3rem;
+      }
+
+      .breadcrumb-item a {
+        color: var(--color-dark);
+        text-decoration: none;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--color-medium);
+      }
+
+      /* Product Section */
+      .product-title {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        color: var(--color-dark);
+      }
+
+      .product-price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-medium);
+      }
+
+      .product-rating .fas {
+        color: #ffc107;
+      }
+
+      .rating-count {
+        color: #777;
+        margin-left: 8px;
+      }
+
+      .product-description ul {
+        padding-left: 20px;
+      }
+
+      .tab-content-inner {
+        padding: 30px 0;
+      }
+
+      .review {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      .review-rating .fas {
+        color: #ffc107;
+      }
+
+      /* Footer */
+      .site-footer {
+        background-color: var(--color-dark);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .site-footer a {
+        color: var(--color-light);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .site-footer a:hover {
+        color: white;
+      }
+
+      .newsletter input {
+        border-radius: 20px;
+        border: none;
+        padding: 10px 15px;
+      }
+
+      .newsletter button {
+        border-radius: 10px;
+        background-color: var(--color-medium-light);
+        border: none;
+        padding: 10px 30px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .newsletter button:hover {
+        background-color: var(--color-medium);
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../home2-copy.html">
+      <img
+        src="../Logo.png"
+        alt="Freshly Logo"
+        height="60"
+        class="me-2"
+      />
+      Freshly
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../home2-copy.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../occasion.html">Occasions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+            
+    <!-- Breadcrumb -->
+    <section class="product-hero py-3 bg-light">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="home2-copy.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="product.html">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Opulent Floral
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="https://www.blossomsflorals.com/public/images/products/17246800474.webp"
+              alt="Opulent Floral"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="product-title">Opulent Floral</h1>
+            <span class="product-price">$45.99</span>
+            <div class="product-rating mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="rating-count">(32 reviews)</span>
+            </div>
+            <p>
+              This lush arrangement of premium blooms evokes pure elegance.
+              Perfect for anniversaries, romantic gestures, or classy gifts.
+            </p>
+            <ul>
+              <li>Premium-grade hand-selected flowers</li>
+              <li>Elegant reusable floral box</li>
+              <li>Custom ribbon and greeting card included</li>
+              <li>Nationwide delivery available</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="product-tabs border-top py-5">
+      <div class="container">
+        <ul class="nav nav-tabs" id="productTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#desc"
+            >
+              Description
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#info"
+            >
+              Additional Information
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#reviews"
+            >
+              Reviews (5)
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-4">
+          <div class="tab-pane fade show active" id="desc">
+            <div class="tab-content-inner">
+              <h3>Product Description</h3>
+              <p>
+                Featuring rare orchids, premium red roses, and seasonal greens,
+                this handcrafted piece is curated to offer an unforgettable
+                floral experience.
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="info">
+            <div class="tab-content-inner">
+              <h3>Additional Information</h3>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Flower Types</th>
+                    <td>Roses, Orchids, Seasonal Greens</td>
+                  </tr>
+                  <tr>
+                    <th>Box Size</th>
+                    <td>12" x 10" x 8"</td>
+                  </tr>
+                  <tr>
+                    <th>Care Tips</th>
+                    <td>Keep cool, water foam daily</td>
+                  </tr>
+                  <tr>
+                    <th>Lasts For</th>
+                    <td>5–8 days</td>
+                  </tr>
+                  <tr>
+                    <th>Delivery</th>
+                    <td>Free express delivery</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="reviews">
+            <div class="tab-content-inner">
+              <h3>Customer Reviews</h3>
+              <div class="review">
+                <strong>Emily Rose</strong> <small>– May 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Absolutely breathtaking! The flowers looked even better than
+                  in the pictures.
+                </p>
+              </div>
+              <div class="review">
+                <strong>Daniel W.</strong> <small>– March 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>
+                  My wife was speechless. Vibrant and fragrant. Worth every
+                  penny.
+                </p>
+              </div>
+              <div class="review">
+                <strong>Sana M.</strong> <small>– February 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p>Super elegant and timely delivered.</p>
+              </div>
+              <div class="review">
+                <strong>Zara H.</strong> <small>– January 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>Stunning arrangement, great packaging.</p>
+              </div>
+              <div class="review">
+                <strong>Ahmed K.</strong> <small>– December 2023</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p>Good overall, but roses wilted slightly in 3 days.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-title">Freshly</h3>
+            <p>
+              Floral elegance delivered fresh. Celebrate every occasion with
+              beauty and fragrance.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="footer-title">Quick Links</h4>
+            <a href="#">All Flowers</a>
+            <a href="#">Occasions</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="col-md-4">
+            <h4 class="footer-title">Newsletter</h4>
+            <p>Subscribe to receive special offers and floral updates.</p>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="form-control mb-2"
+                required
+              />
+              <button type="submit" class="btn btn-outline-dark w-100">
+                Subscribe
+              </button>
+              <small class="subscribe-message mt-2 d-block"></small>
+            </form>
+          </div>
+        </div>
+        <div class="copyright mt-4">
+          &copy; 2025 Freshly. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="../js/Subscribe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

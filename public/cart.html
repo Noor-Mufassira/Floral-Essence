@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart | Freshly</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+
+  <style>
+    .cart-img-thumbnail {
+      max-width: 60px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #d63384;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: #d63384;
+      border-color: #d63384;
+    }
+
+    .btn-primary:hover {
+      background-color: #c2186a;
+      border-color: #c2186a;
+    }
+
+    .btn-outline-primary {
+      color: #d63384;
+      border-color: #d63384;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #d63384;
+      color: white;
+    }
+
+    .table td, .table th {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">
+      <img src="logo.png" alt="Freshly Logo" height="60" class="me-2">Freshly
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home2-copy.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="occasion.html">Occasions</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Section -->
+<section class="main-content container py-5">
+  <h2 class="section-title">Your Cart</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- JavaScript will populate this -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <h4>Total: <span id="cart-total">$0.00</span></h4>
+    <div>
+      <button id="checkout-btn" class="btn btn-primary me-2">Checkout</button>
+      <button id="history-btn" class="btn btn-outline-primary">Order History</button>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="section-title">Stay Updated</h2>
+        <p class="mb-4">Subscribe to our newsletter for exclusive offers and floral inspiration</p>
+        <form class="row g-3 justify-content-center">
+          <div class="col-md-8">
+            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h3 class="footer-title">Freshly</h3>
+        <p>Premium floral arrangements delivered fresh to your door. Bringing nature's beauty to your special moments.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-title">Shop</h4>
+        <div class="footer-links">
+          <a href="#">All Flowers</a>
+          <a href="#">Seasonal</a>
+          <a href="#">Wedding</a>
+          <a href="#">Sympathy</a>
+          <a href="#">Plants</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h4 class="footer-title">Information</h4>
+        <div class="footer-links">
+          <a href="#">About Us</a>
+          <a href="#">Delivery Info</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 mb-4">
+        <h4 class="footer-title">Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Flower Street, Garden City</p>
+        <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+        <p><i class="fas fa-envelope me-2"></i> hello@freshly.com</p>
+        <form id="subscribe-form" class="newsletter mt-3">
+          <input type="email" name="email" class="form-control mb-2" placeholder="Your email" required id="subscribe-email">
+          <button type="submit" class="btn w-100">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="mb-0">&copy; 2025 Freshly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/cart.js"></script> <!-- Updated JS included -->
+</body>
+</html>

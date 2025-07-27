@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Freshly</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card shadow">
+      <h2 class="title text-center">Welcome Back!</h2>
+      <p class="subtitle text-center mb-4">Login as <span id="login-type">User</span></p>
+
+      <form id="login-form">
+        <div class="form-group mb-3">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" required>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" required>
+        </div>
+
+        <div class="form-group mb-3 admin-field d-none">
+          <label for="employeeId">Employee ID</label>
+          <input type="text" class="form-control" id="employeeId" maxlength="4">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+
+      <div class="role-toggle mt-4 text-center">
+        <button id="userBtn" class="btn btn-outline-primary btn-sm me-2 active">Login as User</button>
+        <button id="adminBtn" class="btn btn-outline-primary btn-sm">Login as Admin</button>
+      </div>
+
+      <p class="text-center mt-4">Don't have an account? <a href="register.html" class="text-decoration-none">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script src="js/login.js"></script>
+</body>
+</html>

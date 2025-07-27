@@ -1,0 +1,90 @@
+:root {
+  --color-light: #FFEDFA;
+  --color-medium-light: #FFB8E0;
+  --color-medium: #EC7FA9;
+  --color-dark: #BE5985;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.btn-primary {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-medium);
+  border-color: var(--color-medium);
+}
+
+.btn-outline-primary.active,
+.btn-outline-primary:hover {
+  background-color: var(--color-dark);
+  color: white;
+  border-color: var(--color-dark);
+}
+
+input.form-control {
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+  border-color: var(--color-medium);
+  box-shadow: none;
+}
+
+.text-decoration-none {
+  color: var(--color-dark);
+}
+
+.text-decoration-none:hover {
+  color: var(--color-medium);
+  text-decoration: underline;
+}
+
+.d-none {
+  display: none !important;
+}

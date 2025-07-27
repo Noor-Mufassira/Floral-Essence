@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Freshly</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="register.css"/>
+</head>
+<body>
+
+<div class="container register-page my-5">
+  <h2 class="section-title text-center mb-4">Create an Account</h2>
+
+  <!-- Only user tab remains -->
+  <ul class="nav nav-tabs justify-content-center mb-4" id="registerTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" role="tab">Register as User</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="registerTabsContent">
+    <!-- User Registration -->
+    <div class="tab-pane fade show active" id="user" role="tabpanel">
+      <form id="user-register-form" class="register-form">
+        <div class="mb-3">
+          <label for="userUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="userUsername" required>
+        </div>
+        <div class="mb-3">
+          <label for="userEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="userEmail" required>
+        </div>
+        <div class="mb-3">
+          <label for="userPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="userPassword" required>
+        </div>
+        <div class="mb-3">
+          <label for="userConfirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="userConfirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

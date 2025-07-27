@@ -1,0 +1,113 @@
+/* Contact Page Specific Styles */
+.contact-hero {
+    background-color: var(--color-light);
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    padding: 80px 0;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-method {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-medium-light);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    color: var(--color-dark);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-details p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--color-medium-light);
+    box-shadow: 0 0 0 0.25rem rgba(236, 127, 169, 0.25);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.map-section {
+    margin-bottom: -7px; /* Removes small gap below map */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+}

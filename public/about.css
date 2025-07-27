@@ -1,0 +1,83 @@
+/* About Page Specific Styles */
+.about-hero {
+    background-color: var(--color-light);
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.about-content {
+    padding: 60px 0;
+}
+
+.about-section {
+    padding: 60px 0;
+}
+
+.mission-vision {
+    background-color: var(--color-light);
+    padding: 60px 0;
+}
+
+.team-section {
+    padding: 60px 0;
+    background-color: var(--color-light);
+}
+
+.team-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+    background: white;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-card h3 {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero p.lead {
+        font-size: 1rem;
+    }
+    
+    .about-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .about-section .col-lg-6 {
+        margin-bottom: 30px;
+    }
+}

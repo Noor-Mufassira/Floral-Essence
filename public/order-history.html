@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order History | Freshly</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Freshly Theme -->
+  <link rel="stylesheet" href="home.css" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff8f9;
+    }
+
+    .order-history-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .order-history-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .order-card {
+      border: 1px solid #eee;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+
+    .order-card h5 {
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .order-card small {
+      color: #888;
+    }
+
+    .order-status {
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 12px;
+      display: inline-block;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .order-items {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .no-orders {
+      text-align: center;
+      font-size: 18px;
+      color: #999;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">
+      <img src="logo.png" alt="Freshly Logo" height="60" class="me-2">
+      Freshly
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="home2-copy.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="occasion.html">Occasions</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="cart.html" class="nav-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Order History Content -->
+<div class="order-history-container">
+  <h2>Your Order History</h2>
+  <div id="order-list">
+    <!-- Orders will be injected here -->
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Order History Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const username = sessionStorage.getItem("loggedInUser");
+
+    if (!username) {
+      alert("⚠️ Please log in to view your order history.");
+      window.location.href = "index.html";
+      return;
+    }
+
+    fetch("/order-history?username=" + encodeURIComponent(username))
+      .then(res => res.json())
+      .then(orders => {
+        const orderList = document.getElementById("order-list");
+
+        if (!Array.isArray(orders) || orders.length === 0) {
+          orderList.innerHTML = '<p class="no-orders">No orders found.</p>';
+          return;
+        }
+
+        orders.forEach(order => {
+          let itemsHTML = "";
+          try {
+            const items = Array.isArray(order.items)
+              ? order.items
+              : JSON.parse(order.items);
+
+            itemsHTML = items.map(item =>
+              `<li>${item.name} × ${item.quantity}</li>`
+            ).join("");
+          } catch (e) {
+            itemsHTML = "<li>Unable to display items.</li>";
+          }
+
+          const card = document.createElement("div");
+          card.className = "order-card";
+          card.innerHTML = `
+            <h5>Order by ${order.username}</h5>
+            <small>Placed on: ${new Date(order.ordered_at).toLocaleString()}</small>
+            <p class="mt-2 mb-1"><strong>Status:</strong> <span class="order-status">${order.status}</span></p>
+            <div class="order-items">
+              <strong>Items:</strong>
+              <ul>${itemsHTML}</ul>
+            </div>
+          `;
+          orderList.appendChild(card);
+        });
+      })
+      .catch(err => {
+        console.error("❌ Failed to load order history:", err);
+        document.getElementById("order-list").innerHTML =
+          '<p class="no-orders">Something went wrong. Please try again later.</p>';
+      });
+  });
+</script>
+
+</body>
+</html>

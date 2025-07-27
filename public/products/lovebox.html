@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoveBox - Freshly</title>
+
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --color-light: #ffedfa;
+        --color-medium-light: #ffb8e0;
+        --color-medium: #ec7fa9;
+        --color-dark: #be5985;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: #fff;
+        color: #333;
+      }
+
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: var(--color-dark);
+      }
+
+      .nav-link {
+        color: #555;
+        font-weight: 500;
+      }
+
+      .nav-link.active,
+      .nav-link:hover {
+        color: var(--color-dark);
+      }
+
+      .site-footer {
+        background-color: var(--color-dark);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .site-footer a {
+        color: var(--color-light);
+        text-decoration: none;
+      }
+
+      .site-footer a:hover {
+        color: white;
+      }
+
+      .newsletter button {
+        border-radius: 10px;
+        background-color: white;
+        border: 2px solid black;
+        padding: 12px 30px;
+        margin-top: 10px;
+        font-weight: 600;
+        color: black;
+      }
+
+      .product-title {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        color: var(--color-dark);
+      }
+
+      .product-price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-medium);
+      }
+
+      .product-rating .fas {
+        color: #ffc107;
+      }
+
+      .rating-count {
+        color: #777;
+        font-size: 0.9rem;
+        margin-left: 8px;
+      }
+
+      .tab-content-inner {
+        padding: 30px 0;
+      }
+
+      .review {
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .breadcrumb-item a {
+        color: var(--color-dark);
+        text-decoration: none;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--color-medium);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+   <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../home2-copy.html">
+      <img
+        src="../Logo.png"
+        alt="Freshly Logo"
+        height="60"
+        class="me-2"
+      />
+      Freshly
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../home2-copy.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../occasion.html">Occasions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Product Hero -->
+    <section class="product-hero py-3">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="home2-copy.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="product.html">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">LoveBox</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="your-lovebox-image.jpg"
+              alt="LoveBox"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="product-title">LoveBox</h1>
+            <span class="product-price">$59.99</span>
+            <div class="product-rating mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="rating-count">(36 reviews)</span>
+            </div>
+            <p>
+              The perfect expression of love, carefully curated with romance and
+              charm in every petal. The LoveBox is designed to make hearts
+              flutter and moments unforgettable – a timeless gift for
+              anniversaries, proposals, or simply to say “I love you.”
+            </p>
+            <ul>
+              <li>Handpicked red roses and pink carnations</li>
+              <li>Includes heart-shaped tag with custom message</li>
+              <li>Premium magnetic floral box with ribbon</li>
+              <li>Fragrance-enhanced with a subtle romantic scent</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="product-tabs py-5 border-top">
+      <div class="container">
+        <ul class="nav nav-tabs" id="productTabs" role="tablist">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#desc"
+            >
+              Description
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#info"
+            >
+              Additional Information
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#reviews"
+            >
+              Reviews (3)
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="productTabsContent">
+          <div class="tab-pane fade show active" id="desc">
+            <div class="tab-content-inner">
+              <h3>Product Description</h3>
+              <p>
+                This luxurious LoveBox arrangement features a poetic combination
+                of blooms, scent, and sentiment. Perfect for grand romantic
+                gestures or heartfelt surprises. Designed to last for days while
+                keeping its beauty and fragrance intact.
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="info">
+            <div class="tab-content-inner">
+              <h3>Additional Information</h3>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Flower Types</th>
+                    <td>Roses, Carnations, Eucalyptus</td>
+                  </tr>
+                  <tr>
+                    <th>Box Dimensions</th>
+                    <td>10" x 10" x 6"</td>
+                  </tr>
+                  <tr>
+                    <th>Packaging</th>
+                    <td>Magnetic black box with silk ribbon</td>
+                  </tr>
+                  <tr>
+                    <th>Extras</th>
+                    <td>Personalized love tag and message card</td>
+                  </tr>
+                  <tr>
+                    <th>Delivery</th>
+                    <td>Same-day and midnight options available</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="reviews">
+            <div class="tab-content-inner">
+              <h3>Customer Reviews</h3>
+              <div class="review">
+                <strong>Zahra K.</strong>
+                <small class="text-muted">– May 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Absolutely gorgeous. My fiancé adored it! The packaging and
+                  freshness were on point.
+                </p>
+              </div>
+              <div class="review">
+                <strong>Ali S.</strong>
+                <small class="text-muted">– April 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i>
+                </div>
+                <p>
+                  Really classy and full of love. Delivered earlier than
+                  expected too!
+                </p>
+              </div>
+              <div class="review">
+                <strong>Maria J.</strong>
+                <small class="text-muted">– February 2024</small>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p>
+                  My favorite from Freshly so far. Looks even better in real
+                  life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Freshly</h3>
+            <p>
+              Floral elegance delivered fresh. Celebrate every occasion with
+              beauty and fragrance.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Quick Links</h4>
+            <a href="#">All Flowers</a><a href="#">Occasions</a
+            ><a href="#">About</a><a href="#">Contact</a>
+          </div>
+          <div class="col-md-4">
+            <h4>Newsletter</h4>
+            <p>Subscribe to receive special offers and floral updates.</p>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="form-control mb-2"
+                required
+              />
+              <button type="submit" class="btn btn-outline-dark w-100">
+                Subscribe
+              </button>
+              <small class="subscribe-message mt-2 d-block"></small>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          &copy; 2025 Freshly. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="../js/Subscribe.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
